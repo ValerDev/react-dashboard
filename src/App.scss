@@ -1,0 +1,19 @@
+@import './assets/variables';
+
+#App{
+    display: flex;
+    background-color: $content-background-color;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.maincontent{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    section{
+        padding: 1em;
+        overflow: auto;
+    }
+}
+  
