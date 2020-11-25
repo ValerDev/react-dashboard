@@ -1,6 +1,6 @@
 import React from 'react';
 import "../index.scss"
-import "../assets/header.scss"
+import "../assets/scss/header.scss"
 class Header extends React.Component {
     
     

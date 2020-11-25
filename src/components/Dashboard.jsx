@@ -1,7 +1,9 @@
 import React from 'react';
 import "../index.scss"
-import "../assets/dashboard.scss"
+import "../assets/scss/dashboard.scss"
 import { Link } from "react-router-dom";
+import DashboardMenuItem from './DashboardMenuItem';
+
 class Dashboard extends React.Component {
 
     handleDashboardMenuItems = (event) => {
@@ -20,14 +22,12 @@ class Dashboard extends React.Component {
                     </Link>
                 </div>
                 <div className="menus">
-                    <Link to="/menu_1" className="menu active-menu" onClick={this.handleDashboardMenuItems}>
-                        <span className="menu-title"> menu_1 </span>
-                        <i className="fas fa-bed "></i>
-                    </Link>
-                    <Link to="/menu_2" className="menu" onClick={this.handleDashboardMenuItems}>
-                        <span className="menu-title">menu_2 </span>
-                        <i className="fas fa-angry"></i>
-                    </Link>
+                    <DashboardMenuItem title="Home" link="/home" iClassName="fa fa-home"  isMenuClosed={this.props.state.isMenuClosed} active="true"/>
+                    <DashboardMenuItem title="Stop" link="/stop" iClassName="fas fa-stop" isMenuClosed={this.props.state.isMenuClosed}/>
+                    <DashboardMenuItem title="Play" link="/play" iClassName="fas fa-play" isMenuClosed={this.props.state.isMenuClosed}/>
+                    <DashboardMenuItem title="Bed" link="/bed" iClassName="fas fa-bed" isMenuClosed={this.props.state.isMenuClosed}/>
+                    <DashboardMenuItem title="Plane" link="/plane" iClassName="fa fa-phone" isMenuClosed={this.props.state.isMenuClosed}/>
+                    <DashboardMenuItem title="Tree" link="/tree" iClassName="fas fa-tree" isMenuClosed={this.props.state.isMenuClosed}/>
                 </div>
             </section>
         )
