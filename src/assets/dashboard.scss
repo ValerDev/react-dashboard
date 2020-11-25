@@ -12,17 +12,22 @@
         background-color: $dashboard-background-color;
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
 
-        .menuHandler {
+        a {
+            width: 100%;
             height: 100%;
             display: flex;
+            justify-content: center;
             align-items: center;
 
-            i {
-                width: 100%;
-                cursor: pointer;
-                font-size: 30px;
+            .logo-wrapper {
+                width: 50%;
+                height: 100%;
+                background-image: url(../assets/images/logo.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center center;
             }
         }
     }
@@ -33,46 +38,76 @@
         background-color: $dashboard-background-color;
         display: flex;
         flex-direction: column;
+
         .active-menu {
             background-color: $dashboard-active-color;
+
+            .menu-title {
+                color: $icon-color !important;
+            }
+
+            i {
+                color: $icon-color;
+            }
         }
+
         i {
-            color: $icon-color;
-            font-size: 26px !important;
-            color: #9f65b6;
+            color: $font-light-color;
+            font-size: 1.125rem !important;
             width: 40px;
             margin-left: .3em;
         }
 
         .menu {
-            color: $font-black-color;
+            color: $font-light-color;
             text-decoration: none;
             transition: .15s;
             font-weight: 500;
             display: flex;
-            justify-content: start;
+            justify-content: space-between;
             align-items: center;
             padding: 0 1em;
             width: 100%;
             height: 50px;
+            font-size: 0.875rem;
+
             &:hover {
                 background-color: $content-background-color;
-                
             }
-            span, i{
+
+            span,
+            i {
                 pointer-events: none;
-            }   
+            }
         }
     }
 }
 
 .closeDashboard {
     height: 100%;
-    width: 50px !important;
+    width: 80px !important;
     background-color: $dashboard-background-color;
 
+    .logo-block {
+        .logo-wrapper {
+            width: 30% !important;
+            background-image: url(../assets/images/logo-mini.svg) !important;
+        }
+    }
+
     .menu {
-        font-size: 0;
+        font-size: 0 !important;
         width: 0;
+
+        i {
+            display: block;
+            margin: 0 auto !important;
+            text-align: center;
+            width: 100% !important;
+        }
+
+        .menu {
+            width: 0 !important;
+        }
     }
 }

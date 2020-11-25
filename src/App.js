@@ -11,13 +11,21 @@ import {
 import Menu_1 from './components/content/Menu_1';
 import Menu_2 from './components/content/Menu_2';
 class App extends React.Component {
+  state = {
+    isMenuClosed: true
+  };
+  handleMenu = () => {
+    this.setState({
+      isMenuClosed: !this.state.isMenuClosed
+    })
+  }
   render() {
     return (
       <div id="App">
         <Router>
-          <Dashboard />
+          <Dashboard state={this.state}/>
           <div className="maincontent">
-            <Header />
+            <Header state={this.state} handleMenu={this.handleMenu} />
             <Switch>
               <Route path="/" exact>
                 <Menu_1 />
