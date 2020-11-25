@@ -29,11 +29,13 @@ class Dashboard extends React.Component {
                 </div>
                 <div className="menus">
                     <Link to="/menu_1" className="menu active-menu" onClick={this.handleDashboardMenuItems}>
-                        <i className="fas fa-bed"></i>
-                        <span className="menu"> menu_1 </span> </Link>
+                        <i className="fas fa-bed "></i>
+                        <span className="menu"> menu_1 </span>
+                    </Link>
                     <Link to="/menu_2" className="menu" onClick={this.handleDashboardMenuItems}>
                         <i className="fas fa-angry"></i>
-                        <span className="menu">menu_2 </span></Link>
+                        <span className="menu">menu_2 </span>
+                    </Link>
                 </div>
             </section>
         )

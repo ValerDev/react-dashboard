@@ -19,10 +19,13 @@ class App extends React.Component {
           <div className="maincontent">
             <Header />
             <Switch>
-              <Route path="/menu_1">
+              <Route path="/" exact>
                 <Menu_1 />
               </Route>
-              <Route path="/menu_2">
+              <Route path="/menu_1" exact>
+                <Menu_1 />
+              </Route>
+              <Route path="/menu_2" exact>
                 <Menu_2 />
               </Route>
             </Switch>
