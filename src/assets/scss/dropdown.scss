@@ -1,0 +1,116 @@
+@import './variables';
+
+.dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .dropdown-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid $font-light-color;
+        &:focus-within{
+            border-bottom: 2px solid $primary-color!important;
+        }
+        .control {
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding: .3em;
+            .selected {
+                cursor: pointer;
+                color: $font-light-color;
+            }
+
+            label {
+                width: 100%;
+                height: 0;
+                position: absolute;
+                height: 0;
+                top: 60%;
+                left: 1%;
+                opacity: 0;
+                z-index: -1;
+                a{
+                    display: none;
+                }
+            }
+
+            input[type="checkbox"] {
+                position: absolute;
+                right: 0;
+                opacity: 0;
+                cursor: pointer;
+                z-index: 2;
+                &:checked+label {
+                    display: flex !important;
+                    width: 100%;
+                    min-height: 30px;
+                    position: absolute;
+                    top: 93%;
+                    left: 0%;
+                    background-color: $dashboard-background-color;
+                    box-shadow: $dropdown-box-shadow;
+                    border-radius: 5px;
+                    height: max-content;
+                    opacity: 1!important;
+                    z-index: auto!important;
+                }
+            }
+
+            i {
+                position: absolute;
+                right: 0;
+                top: 33%;
+                cursor: pointer;
+                pointer-events: none;
+                &::before {
+                    color: $icon-light-color;
+                }
+            }
+        }
+
+        .dropdown-menu {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            height: 100%;
+
+            a {
+                display: flex!important;
+                justify-content: flex-start;
+                align-items: center;
+                text-decoration: none;
+                color: $font-light-color;
+                width: 100%;
+                padding: .3em .5em;
+                background-color: $dashboard-background-color;
+                transition: .3s;
+
+                &:first-child {
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                }
+
+                &:last-child {
+                    border-bottom-left-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                }
+
+                &:hover {
+                    background-color: $dashboard-active-color;
+                }
+            }
+        }
+    }
+
+    * {
+        transition: .2s;
+    }
+}

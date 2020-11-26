@@ -8,8 +8,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import Menu_1 from './components/content/Menu_1';
-import Menu_2 from './components/content/Menu_2';
+import Dropdown from './components/Dropdown';
 class App extends React.Component {
   state = {
     isMenuClosed: true
@@ -23,20 +22,22 @@ class App extends React.Component {
     return (
       <div id="App">
         <Router>
-          <Dashboard state={this.state}/>
+          <Dashboard state={this.state} />
           <div className="maincontent">
             <Header state={this.state} handleMenu={this.handleMenu} />
-            <Switch>
-              <Route path="/" exact>
-                <Menu_1 />
-              </Route>
-              <Route path="/menu_1" exact>
-                <Menu_1 />
-              </Route>
-              <Route path="/menu_2" exact>
-                <Menu_2 />
-              </Route>
-            </Switch>
+            <section id="content">
+              <Switch>
+                <Route path="/" exact>
+                  <Dropdown dTitle="Select.." content={[<a href="/home/home">home home</a>]} />
+                </Route>
+                <Route path="/home" exact>
+                  <Dropdown dTitle="select some item" content={[<a href="/home/home">home home</a>]}/>
+                </Route>
+                <Route path="/tree"  exact>
+                  <Dropdown dTitle="select some item"/>
+                </Route>
+              </Switch>
+            </section>
           </div>
         </Router>
       </div>

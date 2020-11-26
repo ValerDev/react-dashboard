@@ -22,12 +22,12 @@ class Dashboard extends React.Component {
                     </Link>
                 </div>
                 <div className="menus">
-                    <DashboardMenuItem title="Home" link="/home" iClassName="fa fa-home"  isMenuClosed={this.props.state.isMenuClosed} active="true"/>
-                    <DashboardMenuItem title="Stop" link="/stop" iClassName="fas fa-stop" isMenuClosed={this.props.state.isMenuClosed}/>
-                    <DashboardMenuItem title="Play" link="/play" iClassName="fas fa-play" isMenuClosed={this.props.state.isMenuClosed}/>
-                    <DashboardMenuItem title="Bed" link="/bed" iClassName="fas fa-bed" isMenuClosed={this.props.state.isMenuClosed}/>
-                    <DashboardMenuItem title="Plane" link="/plane" iClassName="fa fa-phone" isMenuClosed={this.props.state.isMenuClosed}/>
-                    <DashboardMenuItem title="Tree" link="/tree" iClassName="fas fa-tree" isMenuClosed={this.props.state.isMenuClosed}/>
+                    <DashboardMenuItem title="Home" link="/home" iClassName="fa fa-home" isMenuClosed={this.props.state.isMenuClosed} active="true" />
+                    <DashboardMenuItem title="Stop" link="/stop" iClassName="fas fa-stop" isMenuClosed={this.props.state.isMenuClosed} />
+                    <DashboardMenuItem title="Play" link="/play" iClassName="fas fa-play" isMenuClosed={this.props.state.isMenuClosed} />
+                    <DashboardMenuItem title="Bed" link="/bed" iClassName="fas fa-bed" isMenuClosed={this.props.state.isMenuClosed} />
+                    <DashboardMenuItem title="Plane" link="/plane" iClassName="fa fa-phone" isMenuClosed={this.props.state.isMenuClosed} />
+                    <DashboardMenuItem title="Tree" link="/tree" iClassName="fas fa-tree" isMenuClosed={this.props.state.isMenuClosed} />
                 </div>
             </section>
         )
