@@ -1,20 +1,31 @@
 import React from 'react';
 import "../index.scss"
 import "../assets/scss/header.scss"
-class Header extends React.Component {
-    
-    
-    render() {
-        return (
-            <section id='header'>
-                <div className="header-content">
-                    <div className='menuHandler'>
-                        <i className={this.props.state.isMenuClosed ? "fas fa-bars" : 'fas fa-times'} onClick={this.props.handleMenu}></i>
-                    </div>
-                </div>
-            </section>
-        )
+import { connect } from "react-redux";
+import { showMenu } from "../redux/actions/action.js";
+
+
+function Header({ isShow, showMenu }) {
+    const handleMenu = () =>  {
+        showMenu(!isShow)
     }
+
+    return (
+        <section id='header'>
+            <div className="header-content">
+                <div className='menuHandler'>
+                    <i className={isShow ? "fas fa-times" : 'fas fa-bars'} onClick={handleMenu} ></i>
+                </div>
+            </div>
+        </section>
+    )
 }
 
-export default Header;
+const mapStateToProps = ({ isShow }) => ({
+    isShow
+});
+
+const mapDispatchToProps = {
+    showMenu,
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
