@@ -9,7 +9,6 @@ function Header({ isShow, showMenu }) {
     const handleMenu = () =>  {
         showMenu(!isShow)
     }
-
     return (
         <section id='header'>
             <div className="header-content">

@@ -15,13 +15,7 @@ function Dashboard({ showMenu, isShow }) {
                 </Link>
             </div>
             <div className="menus">
-                <DashboardMenuItem title="Home" link="/home" iClassName="fa fa-home"  isShow={isShow} active="true"/>
-                <DashboardMenuItem title="Stop" link="/stop" iClassName="fas fa-stop" isShow={isShow} />
-                <DashboardMenuItem title="Play" link="/play" iClassName="fas fa-play" isShow={isShow} />
-                <DashboardMenuItem title="Bed" link="/bed" iClassName="fas fa-bed" isShow={isShow} />
-                <DashboardMenuItem title="Plane" link="/plane" iClassName="fa fa-phone" isShow={isShow} />
-                <DashboardMenuItem title="Tree" link="/tree" iClassName="fas fa-tree" isShow={isShow} />
-                <DashboardMenuItem title="Ambulance" link="/ambulance" iClassName="fas fa-ambulance" isShow={isShow} />
+                <DashboardMenuItem title="Contacts" link="/contatcs" iClassName="fas fa-address-card" isShow={isShow} active="true"/>
             </div>
         </section>
     )
